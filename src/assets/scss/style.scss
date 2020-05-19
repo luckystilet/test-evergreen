@@ -1,0 +1,79 @@
+@import "base";
+
+body{
+  font-family: 'Neucha', cursive;
+  &::-webkit-scrollbar{
+    width: 10px;
+    border-radius:5px;
+  }
+  &::-webkit-scrollbar-track{
+    background-color: #E0E0E0;
+  }
+  &::-webkit-scrollbar-thumb{
+    background: linear-gradient(0deg, #84E7FF 0%, #4A8DFF 100%);
+    border-radius: 5px;
+  }
+  overflow-y: scroll;
+}
+.header, .footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,.26);
+  background-color: #075782;
+  min-height: 80px;
+}
+
+.creator{
+  text-align: right;
+  text-shadow: 1px 1px 1px rgba(0,0,0,.3);
+  color: #333333;
+  strong{
+    font-size: 1.8rem;
+  }
+}
+.my-logo{
+  font-size: 34px;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0,0,0,.3);
+  color: #333333;
+  user-select: none;
+}
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+.main{
+  padding-top: 140px;
+}
+.fade-in{
+  animation: fadein .6s;
+}
+@keyframes fadein{
+   from{
+     opacity: 0;
+   }
+   to{
+     opacity: 1;
+   }
+ }
+
+.custom-wave{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  opacity: .45;
+  position: absolute;
+  animation: wave .6s linear;
+  z-index: 0;
+  transform: scale(0);
+}
+@keyframes wave{
+  to{
+    opacity: 0;
+    transform: scale(2.5);
+  }
+}
